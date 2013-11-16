@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1>This is the Create page</h1>
+	<ul class="interestList">
+	{% for i in intrests %}
+		<li data-id="{{i.id}}">{{ i.name }}<span class="delete">X</span></li>
+	{% endfor %}
+	</ul>
+	
+	<div class="newInterest">
+		<p class="error">Please enter values for all fields</p>
+			<input type="text" name="name" id="name" placeholder="Name" />
+			<input type="text" name="minVal" id="minVal"  placeholder="min" />
+			<input type="text" name="maxVal" id="maxVal" placeholder="max" />
+			<input type="button" value="submit" id="submitInterest" name="submit" />
+	</div><!-- /newInterest -->
+	
+{% endblock %}
+{% block scriptsToLoad %}
+	<script src="/static/scripts/create.js"></script>
+{% endblock %}

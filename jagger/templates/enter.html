@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1>This is the enter page</h1>
+	<ul class="items">	
+		{% for i in intrests %}
+			<li data-id="{{i.id}}"><span class="title">{{i.name}}</span><input class="knob" data-width="200" data-cursor="true" data-fgColor="#333333" data-value="0" value=""/></li>
+		{% endfor %}
+	</ul>
+	<p class="cf"><a class="btn main-action" id="save-btn">Save</a></p>
+	<p class="error"></p>
+	<p class="success">Values entered You won't be able to enter a new value until tomorrow.</p>
+{% endblock %}
+{% block scriptsToLoad %}
+	<script src="/static/scripts/libs/jquery.knob.js"></script>
+	<script src="/static/scripts/enter.js"></script>
+{% endblock %}
