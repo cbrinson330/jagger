@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1>This is the login page</h1>
+	<h3 class="error"></h3>
+	<div class="login half-width">
+		<h3>Login</h3>
+		<form id="register-user" action="/track" class="login-form">
+			<p>
+				<label>Username</label><br />
+				<input type="text" class="username" name="username"/>
+			</p>
+			<p>
+				<label>Password</label><br />
+				<input type="password" class="pass" name="password"/>
+			</p>
+			<p><input type="submit" value="submit" /></p>
+		</form>
+	</div><!-- /login -->
+	<div class="register half-width">
+		<h3>Register</h3>
+		<form id="register-user" class="register-form">
+			<p>
+				<label>Username</label><br />
+				<input type="text" class="username" name="username"/>
+			</p>
+			<p>
+				<label>Email</label><br />
+				<input type="text" class="email" name="email"/>
+			</p>
+			<p>
+				<label>Password</label><br />
+				<input type="password" class="pass" name="password"/>
+			</p>
+			<p><input type="submit" value="submit" /></p>
+		</form>
+	</div><!-- /register -->
+{% endblock %}
+{% block scriptsToLoad %}
+		<script src="/static/scripts/libs/jquery.min.js"></script>
+		<script src="/static/scripts/login.js"></script>
+{% endblock %}

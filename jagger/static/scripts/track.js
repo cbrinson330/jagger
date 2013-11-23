@@ -31,6 +31,7 @@
 						day = parseInt(localDateVals.day),
 						value = parseInt(localDateVals.value),
 						validDate = [Date.UTC(year,month,day),value];
+						//validDate = [year+month+day,value];
 			
 				seriesObject.data.push(validDate);
   		}

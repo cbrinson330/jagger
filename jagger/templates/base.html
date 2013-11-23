@@ -7,20 +7,21 @@
 	<body>
 		<div class="wrapper">
 			{% block nav %}
-				<ul class="nav">
-					<li><a href="/">Home</a></li>
-					<li><a href="/create">Create</a></li>
-					<li><a href="/entry">Enter</a></li>
-				</ul>
+				{% if user.is_authenticated %}
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/create">Create</a></li>
+						<li><a href="/entry">Enter</a></li>
+						<li><a href="/logout">Logout</a></li>
+					</ul>
+				{% endif %}
 			{% endblock %}
 			<div class="content">
 				{% block content %}{% endblock %}
 			</div><!-- /content -->
 		</div><!-- /wrapper -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script>
-			window.jagger = window.jagger || {};</script>
-		</script>
+		<script src="/static/scripts/libs/jquery.min.js"></script>
+		<script>window.jagger = window.jagger || {};</script>
 		{% block scriptsToLoad %}{% endblock %}
 	</body>
 </html>

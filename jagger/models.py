@@ -5,3 +5,4 @@ class intrest(models.Model):
 	minVal = models.IntegerField()
 	maxVal = models.IntegerField()
 	dateVals = models.CharField(max_length=800)
+	owner = models.ForeignKey('auth.User', default=0)
