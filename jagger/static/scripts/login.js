@@ -8,10 +8,10 @@
 				$error = $('.error');
 
 		if($that.hasClass('login-form')){
-			url = 'api/interest/login';
+			url = '/api/interest/login';
 		}
 		else if($that.hasClass('register-form')){
-			url = 'api/interest/register';
+			url = '/api/interest/register';
 		}
 		else{
 			return false;
